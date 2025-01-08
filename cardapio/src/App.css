@@ -26,3 +26,81 @@
   box-shadow: rgba(100, 100, 111, 0.2);
   transform: scale(1.1);
 }
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal-body {
+    background-color: white;
+    padding: 24px;
+    height: 60%;
+    width: 60%;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ajusta o alinhamento dos itens na parte superior */
+}
+
+.modal-body h2 {
+    font-size: 32px;
+}
+
+.input-container {
+    width: calc(100% - 24px);
+    display: flex;
+    flex-direction: column; /* Stack inputs vertically */
+    gap: 12px; /* Add some space between inputs */
+}
+
+.input-field {
+    width: 100%; /* Make the input field take the full width */
+    padding: 12px; /* Add padding for better touch */
+    border-radius: 12px; /* Rounded corners */
+    border: 1px solid #ccc; /* Light border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Ajuste para os botões */
+.button-group {
+    display: flex;
+    flex-direction: column; /* Alinhar os botões verticalmente */
+    gap: 16px; /* Espaço entre os botões */
+    width: 100%; /* Fazer os botões ocuparem toda a largura disponível */
+}
+
+.btn-secondary, .btnDelete {
+    padding: 12px 20px; /* Add padding for the button */
+    font-size: 16px; /* Font size */
+    border: none; /* Remove border */
+    border-radius: 12px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    width: 100%; /* Fazer os botões ocuparem toda a largura disponível */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.btn-secondary {
+    background-color: #007bff; /* Button color */
+    color: white; /* Button text color */
+}
+
+.btn-secondary:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.btnDelete {
+    background-color: #e74c3c;
+    color: white;
+    text-align: center; /* Alinha o texto do botão ao centro */
+}
+
+.btnDelete:hover {
+    background-color: #c0392b;
+}

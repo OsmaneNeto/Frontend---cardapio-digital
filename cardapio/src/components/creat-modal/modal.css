@@ -1,8 +1,7 @@
 .modal-overlay {
     position: fixed;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,45 +11,104 @@
 .modal-body {
     background-color: white;
     padding: 24px;
-    height: 60%;
     width: 60%;
     border-radius: 24px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: stretch;
+    gap: 12px;
+    position: relative; /* Garantir que o botão de fechar fique dentro deste container */
 }
 
-.modal-body h2 {
-    font-size: 32px;
+.modal-header {
+    display: flex;
+    justify-content: space-between; /* Alinha o título à esquerda e o botão à direita */
+    align-items: center;
+    padding-right: 25px;
 }
+
+
 
 .input-container {
-    width: calc(100% - 24px);
     display: flex;
-    flex-direction: column; /* Stack inputs vertically */
-    gap: 12px; /* Add some space between inputs */
+    flex-direction: column;
+    gap: 12px;
 }
 
-.input-field {
-    width: 100%; /* Make the input field take the full width */
-    padding: 12px; /* Add padding for better touch */
-    border-radius: 12px; /* Rounded corners */
-    border: 1px solid #ccc; /* Light border */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.btnDelete, .btn-secondary {
+    padding: 10px;
+    font-size: 14px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: auto;
+}
+
+.btnDelete {
+    background-color: #e74c3c;
+    background-color: #007bff; /* Cor do botão igual aos outros */
+    border: none;
+    color: white;
+    font-size: 14px; /* Tamanho da fonte igual aos outros botões */
+    padding: 10px 20px; /* Tamanho do padding igual ao dos outros botões */
+    border-radius: 5px; /* Mesmo border-radius dos botões */
+    cursor: pointer;
+    position: absolute;
+    top: 500px; /* Distância do topo */
+    right: 800px; /* Distância da direita */
+    left: 800px;
+    margin-bottom: 0px;
+    width: auto;
+    height: auto;
+    line-height: 1; /* Ajuste da linha para centralizar o conteúdo */
+    transition: background-color 0.3s;
+    margin: 1px 90px 90px 300px; 
+}
+
+.btnDelete:hover {
+    background-color: #c0392b;
 }
 
 .btn-secondary {
-    padding: 12px 20px; /* Add padding for the button */
-    background-color: #007bff; /* Button color */
-    color: white; /* Button text color */
-    border: none; /* Remove border */
-    border-radius: 12px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor */
-    font-size: 16px; /* Font size */
-    margin-top: 16px; /* Space above the button */
-    transition: background-color 0.3s; /* Smooth transition */
+    background-color: #007bff;
 }
 
 .btn-secondary:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+    background-color: #0056b3;
 }
+
+
+.close-button {
+    background-color: #007bff; /* Cor do botão igual aos outros */
+    border: none;
+    color: white;
+    font-size: 14px; /* Tamanho da fonte igual aos outros botões */
+    padding: 10px 20px; /* Tamanho do padding igual ao dos outros botões */
+    border-radius: 5px; /* Mesmo border-radius dos botões */
+    cursor: pointer;
+    position: absolute;
+    top: 500px; /* Distância do topo */
+    right: 800px; /* Distância da direita */
+    left: 800px;
+    margin-bottom: 0px;
+    width: auto;
+    height: auto;
+    line-height: 1; /* Ajuste da linha para centralizar o conteúdo */
+    transition: background-color 0.3s;
+    margin: 90px 100px 0px 300px; 
+}
+
+.close-button:hover {
+    background-color: #0056b3; /* Cor de hover igual aos outros botões */
+}
+
